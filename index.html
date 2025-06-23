@@ -26,22 +26,39 @@
         <a href="#team" class="hover:text-indigo-600 font-medium">Team</a>
         <a href="#videos" class="hover:text-indigo-600 font-medium">Videos</a>
       </div>
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-indigo-700 focus:outline-none">
+          <i class="fa fa-bars text-2xl"></i>
+        </button>
+      </div>
     </div>
+    <div id="menu" class="hidden flex-col space-y-2 px-4 pb-4 md:hidden bg-white w-full shadow-md absolute top-16 left-0 z-50">
+      <a href="#about" class="block hover:text-indigo-600 font-medium">About</a>
+      <a href="#team" class="block hover:text-indigo-600 font-medium">Team</a>
+      <a href="#videos" class="block hover:text-indigo-600 font-medium">Videos</a>
+    </div>
+    <script>
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('menu');
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    </script>
   </nav>
   <div class="h-16"></div>
 
   <!-- Hero -->
-<section class="text-center py-16 bg-indigo-700 text-white">
-  <h1 class="text-4xl font-bold mb-3 flex items-center justify-center gap-3">
+<section class="text-center py-12 sm:py-16 bg-indigo-700 text-white px-2 sm:px-6">
+  <h1 class="text-2xl sm:text-4xl font-bold mb-3 flex items-center justify-center gap-3">
     Emotional Intelligence (EI) Scrum Planner
   </h1>
-  <p class="text-xl">Smarter Agile Management with Emotion Intelligence & Automated Task Assignment</p>
+  <p class="text-base sm:text-xl">Smarter Agile Management with Emotion Intelligence & Automated Task Assignment</p>
 </section>
 
 <!-- About Section -->
-<section id="about" class="py-16 px-6 max-w-6xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-12">🚀 Core Features</h2>
-  <div class="grid md:grid-cols-2 gap-10">
+<section id="about" class="py-10 px-3 sm:px-6 max-w-6xl mx-auto">
+  <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">🚀 Core Features</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
     <div>
       <h3 class="text-xl font-semibold">🤖 Automated Task Assignment</h3>
       <p>Uses AI to assign tasks based on developer performance, mood, and historical data — ensuring balanced workloads and optimized sprint flow.</p>
@@ -73,12 +90,12 @@
 </section>
 
 <!-- Team Section -->
-<section id="team" class="bg-white py-16 px-6 max-w-6xl mx-auto">
+<section id="team" class="bg-white py-10 px-3 sm:px-6 max-w-6xl mx-auto">
   <h2 class="text-4xl font-bold text-center text-blue-600 mb-12 flex items-center justify-center gap-3">
     <i class="fa-solid fa-users text-blue-600 text-3xl"></i> OUR TEAM
   </h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 text-center">
 
       <!-- Member 1 (Team Leader) -->
       <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl hover:scale-105 duration-300 ease-in-out">
@@ -98,7 +115,7 @@
 
       <!-- Member 2 -->
       <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl hover:scale-105 duration-300 ease-in-out">
-        <img src="aboelala.jpg" alt="Aboelala" class="w-32 h-32 mx-auto rounded-full border-4 border-blue-300 object-cover mb-4">
+        <img src="aboelala.jpg" alt="Aboelala" class="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full border-4 border-blue-300 object-cover mb-4">
         <h3 class="font-bold text-lg text-gray-800">Aboelala Mokhtar</h3>
         <p class="text-blue-500 font-medium mb-2">Team Member</p>
         <p class="text-gray-600 mb-4">01069866807</p>
@@ -114,7 +131,7 @@
 
       <!-- Member 3 -->
       <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl hover:scale-105 duration-300 ease-in-out">
-        <img src="ayman.jpeg" alt="Ayman" class="w-32 h-32 mx-auto rounded-full border-4 border-blue-300 object-cover mb-4">
+        <img src="ayman.jpeg" alt="Ayman" class="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full border-4 border-blue-300 object-cover mb-4">
         <h3 class="font-bold text-lg text-gray-800">Ahmed Ayman</h3>
         <p class="text-blue-500 font-medium mb-2">Team Member</p>
         <p class="text-gray-600 mb-4">01022085061</p>
@@ -130,7 +147,7 @@
 
       <!-- Member 4 -->
       <div class="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl hover:scale-105 duration-300 ease-in-out">
-        <img src="moneim.jpg" alt="Moniem" class="w-32 h-32 mx-auto rounded-full border-4 border-blue-300 object-cover mb-4">
+        <img src="moneim.jpg" alt="Moniem" class="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full border-4 border-blue-300 object-cover mb-4">
         <h3 class="font-bold text-lg text-gray-800">Abdulrahman AbdelMoniem</h3>
         <p class="text-blue-500 font-medium mb-2">Team Member</p>
         <p class="text-gray-600 mb-4">01001664973</p>
@@ -153,12 +170,12 @@
 
     <div class="mb-12 text-center">
       <h3 class="text-xl font-semibold mb-4">📢 Marketing Video</h3>
-      <iframe width="100%" height="600" src="https://drive.google.com/file/d/1qp-mSvuF1ac4K0dD4cEmz-Uk9-zEqoWw/preview" frameborder="0"
+      <iframe width="100%" height="500" src="https://drive.google.com/file/d/1qp-mSvuF1ac4K0dD4cEmz-Uk9-zEqoWw/preview" frameborder="0"
         allowfullscreen class="rounded-lg shadow-md"></iframe>
     </div>
     <div class="mb-12 text-center">
       <h3 class="text-xl font-semibold mb-4">🎬 project Video</h3>
-      <iframe width="100%" height="600" src="https://drive.google.com/file/d/1JovgT0fNJ7mj04aNU8L2hSjkSRHHCdpN/preview" frameborder="0"
+      <iframe width="100%" height="500" src="https://drive.google.com/file/d/1JovgT0fNJ7mj04aNU8L2hSjkSRHHCdpN/preview" frameborder="0"
         allowfullscreen class="rounded-lg shadow-md"></iframe>
     </div>
   </section>
